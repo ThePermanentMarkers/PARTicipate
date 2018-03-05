@@ -220,7 +220,7 @@ const article = {
       ],
     },
     {
-      image: '/team.jpg',
+      image: 'team.jpg',
       caption:
         'Live in action: TPM testing their paper prototype on Paul Klammer, journalist and research assistant at TU Dortmund.',
       comments: [],

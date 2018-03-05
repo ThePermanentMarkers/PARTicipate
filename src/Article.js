@@ -35,7 +35,7 @@ export default class Article extends React.Component {
       <div className="article">
         <img
           className="article__logo"
-          src="/marker.png"
+          src="marker.png"
           alt="Permanent Markers"
         />
         <h1 className="article__heading">{article.title}</h1>
