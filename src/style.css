@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto');
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+.comment,
+.comment-form {
+  padding: 0;
+  margin: 10px 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+.comment-form {
+  display: flex;
+  padding: 10px 20px;
+  background: #d1d8e0;
+  flex-direction: column;
+}
+
+.comment-form__text {
+  padding: 10px;
+  margin: 10px 0;
+  height: calc(1.5em + 20px);
+  border: 1px solid #778ca3;
+  transition: 0.2s border-color;
+}
+
+.comment-form__text--open {
+  height: auto;
+  min-height: 150px;
+}
+
+.comment-form__text:focus {
+  border-color: #4b7bec;
+}
+
+.comment-form__source {
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.comment-section__comments {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.button-group {
+  display: flex;
+}
+
+.button {
+  border: 1px solid #333;
+  border-radius: 5px;
+  background: #778ca3;
+  flex: 1;
+  padding: 10px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.2s background;
+  margin-bottom: 10px;
+}
+
+.button:hover {
+  background: #4b6584;
+}
+
+.button--primary {
+  background: #4b7bec;
+}
+
+.button--primary:hover {
+  background: #3867d6;
+}
+
+.button--positive {
+  background: #26de81;
+}
+
+.button--positive:hover {
+  background: #20bf6b;
+}
+
+.button--negative {
+  background: #fc5c65;
+}
+
+.button--negative:hover {
+  background: #eb3b5a;
+}
+
+.button-group > .button:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.button-group > .button:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.comment__author {
+  padding: 10px 20px;
+  background: #d1d8e0;
+  font-weight: bold;
+}
+
+.comment__text {
+  margin: 0;
+  padding: 10px 20px;
+  line-height: 1.5;
+}
+
+.comment__sources {
+  padding: 10px 20px;
+  background: #d1d8e0;
+}
+
+.comment__sources__title {
+  font-weight: bold;
+}
+
+.comment-source {
+  display: flex;
+  align-items: baseline;
+}
+
+.comment-source__link {
+  background: #fff;
+  padding: 10px;
+  border-radius: 2px;
+  margin: 10px;
+  margin-left: 0;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #000;
+  white-space: nowrap;
+}
+
+.comment-source__link--good {
+  background: #20bf6b;
+  color: #fff;
+}
+
+.comment-source__link--bad {
+  background: #eb3b5a;
+  color: #fff;
+}
+
+.article {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 0 55px 0 25px;
+}
+
+.article__heading {
+  font-family: 'Roboto', serif;
+  font-weight: 800;
+  font-size: 44px;
+  position: ;
+  display: inline-flex;
+}
+
+.article__logo {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 200px;
+}
+
+@media (max-width: 1249px) {
+  .article__logo {
+    display: none;
+  }
+}
+
+.article__author {
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+.article__intro {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.article__image {
+  display: block;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.article__image > img,
+.article__image > figcaption {
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.article__image > figcaption {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.article-section {
+  align-content: center;
+  flex-direction: column;
+}
+
+.article-section-content {
+  position: relative;
+}
+
+.article-section-content__p,
+.article__intro {
+  text-align: justify;
+  line-height: 1.5;
+  position: relative;
+  white-space: pre-wrap;
+}
+
+.article-section-content__heat {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: -55px;
+  width: 30px;
+}
+
+.button__heatmap {
+  top: 5px;
+  display: block;
+  position: sticky;
+
+  z-index: 2;
+}
+
+.aspect-ratio {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 51%;
+}
+
+.aspect-ratio > iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
